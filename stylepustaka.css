@@ -1,0 +1,29 @@
+:root {
+    --primary-color: #4c67d3;
+    --secondary-color: #e3e6f1;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+.wrapper-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+.title-form {
+    text-align: center;
+}
+.form-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 640px;
+    height: auto;
+    background-color: var(--secondary-color);
+    margin: 160px auto;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.3);
+}
