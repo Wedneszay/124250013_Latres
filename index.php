@@ -15,7 +15,7 @@ session_start();
     <main class="wrapper-form">
         <form action="proses_login.php" method="POST">
             <div class="form-login">
-                <div class="title-form">
+                <div class="title-login">
                     <h1>Pustaka Digital</h1>
                     <p>Sistem Perpustakaan Nasional</p>
                 </div>
