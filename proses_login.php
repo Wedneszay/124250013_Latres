@@ -24,7 +24,7 @@ if (mysqli_num_rows($result) > 0) {
         header('Location: dashboardAdmin.php');
     }
     else {
-        header('Location: koleksibuku.php');
+        header('Location: list_koleksi.php');
     }
     exit();
 }
