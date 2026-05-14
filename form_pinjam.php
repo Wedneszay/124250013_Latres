@@ -2,7 +2,7 @@
 session_start();
 include 'connection.php';
 
-$query = "SELECT * FROM databuku";
+$query = "SELECT * FROM databuku WHERE stok > 0";
 $result = mysqli_query($koneksi, $query);
 ?>
 
@@ -69,7 +69,7 @@ $result = mysqli_query($koneksi, $query);
                         <select class="form-select" id="exampleFormControlInput3" name="id_buku" aria-label="Default select example" required>
                         <option selected disabled hidden>Pilih Buku Tersedia</option>
                         <?php while($row = mysqli_fetch_assoc($result)) {?>
-                        <option value="<?php echo $row['id'] ?>"><?php echo $row['judul'] ?></option>
+                        <option value="<?php echo $row['id'] ?>"><?php echo $row['judul'] ?> - <?php echo "Stok ", $row['stok'] ?></option>
                         <?php }?>
                     </select>
                 </div>
