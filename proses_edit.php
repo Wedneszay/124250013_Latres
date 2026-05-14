@@ -9,7 +9,7 @@ $judul = $_POST['judul'];
 $pengarang = $_POST['pengarang'];
 $kategori = $_POST['kategori'];
 
-$query = "UPDATE databuku SET id = '$id', kode_buku = '$kode_buku', stok = '$stok', judul = '$judul', pengarang = '$pengarang', kategori = '$kategori' WHERE id = '$id'";
+$query = "UPDATE databuku SET kode_buku = '$kode_buku', stok = '$stok', judul = '$judul', pengarang = '$pengarang', kategori = '$kategori' WHERE id = '$id'";
 /* echo $query; 
 die(); */
 
