@@ -2,6 +2,11 @@
 session_start();
 include 'connection.php';
 
+if ($_SESSION['loggedIn'] != true) {
+    header('Location: index.php');
+    exit();
+}
+
 $kode_buku = $_POST['kodeBuku'];
 $stok = $_POST['stok'];
 $judul = $_POST['judul'];

@@ -2,6 +2,11 @@
 session_start();
 include 'connection.php';
 
+if ($_SESSION['loggedIn'] != true) {
+    header('Location: index.php');
+    exit();
+}
+
 $kode_peminjaman = $_POST['kode_peminjaman'];
 $nama_peminjam = $_POST['nama_peminjam'];
 $id_buku = $_POST['id_buku'];

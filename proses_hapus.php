@@ -2,6 +2,11 @@
 session_start();
 include 'connection.php';
 
+if ($_SESSION['loggedIn'] != true) {
+    header('Location: index.php');
+    exit();
+}
+
 $id = $_GET['id'];
 $query = "DELETE FROM databuku WHERE id='$id'";
 

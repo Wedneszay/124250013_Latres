@@ -2,6 +2,11 @@
 session_start();
 include 'connection.php';
 
+if ($_SESSION['loggedIn'] != true) {
+    header('Location: index.php');
+    exit();
+}
+
 $query = "SELECT datapeminjam.id, datapeminjam.kode_peminjaman, datapeminjam.nama_peminjam, datapeminjam.id_buku, databuku.judul, datapeminjam.tanggal_pinjam, datapeminjam.deadline, datapeminjam.tanggal_kembali FROM datapeminjam JOIN databuku ON datapeminjam.id_buku = databuku.id";
 $result = mysqli_query($koneksi, $query);
 

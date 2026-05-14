@@ -2,6 +2,11 @@
 session_start();
 include 'connection.php';
 
+if ($_SESSION['loggedIn'] != true) {
+    header('Location: index.php');
+    exit();
+}
+
 $query = "SELECT * FROM databuku WHERE stok > 0";
 $result = mysqli_query($koneksi, $query);
 ?>

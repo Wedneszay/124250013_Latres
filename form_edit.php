@@ -3,6 +3,11 @@ session_start();
 include 'connection.php';
 $id = $_GET['id'];
 
+if ($_SESSION['loggedIn'] != true) {
+    header('Location: index.php');
+    exit();
+}
+
 $query = "SELECT * FROM databuku WHERE id='$id'";
 $result = mysqli_query($koneksi, $query);
 $row = mysqli_fetch_assoc($result);
