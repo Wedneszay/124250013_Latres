@@ -104,10 +104,29 @@ $result = mysqli_query($koneksi, $query);
                             </td>
                             <td>
                                 <?php if ($row['tanggal_kembali'] == NULL) { ?>
-                                    <a class="btn btn-primary" href="proses_kembali.php?id=<?php echo $row['id']; ?>&id_buku=<?php echo $row['id_buku']; ?>" role="button">Kembalikan</a>
+                                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalKonfirmasiKembali<?php echo $row['id'], $row['id_buku']; ?>">
+                                        Kembalikan
+                                    </button>
+                                    <div class="modal fade" id="modalKonfirmasiKembali<?php echo $row['id'], $row['id_buku']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Konfirmasi Pengembalian</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Ingin mengembalikan?</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                                                    <a class="btn btn-primary" href="proses_kembali.php?id=<?php echo $row['id']; ?>&id_buku=<?php echo $row['id_buku']; ?>" role="button">Konfirmasi</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 <?php } 
                                 else { ?> 
-                                    <span class="badge bg-secondary">Selesai</span>
+                                    <span class="badge bg-success">Selesai</span>
                                 <?php } ?>
                             </td>
                         </tr>
@@ -116,7 +135,7 @@ $result = mysqli_query($koneksi, $query);
                 </table>
             </div>
         </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </main>
 </body>
 </html>
