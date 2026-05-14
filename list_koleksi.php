@@ -63,8 +63,8 @@ $result = mysqli_query($koneksi, $query)
                                 <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Koleksi Buku</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="modal-body">
-                                <form action="proses_insert.php" method="post">
+                            <form action="proses_insert.php" method="post">
+                                <div class="modal-body">
                                     <div class="wrapper-kode-stok">
                                         <div class="mb-3">
                                             <label for="exampleFormControlInput1" class="form-label">Kode Buku</label>
@@ -90,12 +90,14 @@ $result = mysqli_query($koneksi, $query)
                                             <option value="Fiksi">Fiksi</option>
                                             <option value="Teknologi">Teknologi</option>
                                             <option value="Ilmiah">Ilmiah</option>
+                                            <option value="Novel">Novel</option>
+                                            <option value="Komedi">Komedi</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
-                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                    <button type="submit" class="btn btn-primary">Tambah</button>
                                 </div>
                             </form>
                         </div>
