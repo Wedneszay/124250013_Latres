@@ -87,7 +87,7 @@ $row = mysqli_fetch_assoc($result);
                         <option value="Komedi">Komedi</option>
                     </select>
                 </div>
-                <div class="form-button">
+                <div class="form-button d-flex justify-content-center gap-2">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
                     <button type="submit" class="btn btn-primary">Save changes</button>
                 </div>    

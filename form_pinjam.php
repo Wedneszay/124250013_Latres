@@ -88,9 +88,9 @@ $result = mysqli_query($koneksi, $query);
                         <input type="date" class="form-control" id="exampleFormControlInput5" name="deadline" required>
                     </div>
                 </div>
-                <div class="form-button">
+                <div class="form-button d-flex justify-content-center gap-2">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
                 </div>
             </form>
         </div>
