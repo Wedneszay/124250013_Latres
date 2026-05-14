@@ -10,7 +10,7 @@ die(); */
 $result = mysqli_query($koneksi, $query);
 
 if ($result) {
-    header('Location: koleksibuku.php');
+    header('Location: list_koleksi.php');
     exit();
 }
 else {
