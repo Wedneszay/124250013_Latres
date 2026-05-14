@@ -66,11 +66,11 @@ $result = mysqli_query($koneksi, $query)
                             <form action="proses_insert.php" method="post">
                                 <div class="modal-body">
                                     <div class="wrapper-kode-stok">
-                                        <div class="mb-3">
+                                        <div class="mb-3 col-md-5">
                                             <label for="exampleFormControlInput1" class="form-label">Kode Buku</label>
                                             <input type="text" class="form-control" id="exampleFormControlInput1" name="kodeBuku" value="BK000" required>
                                         </div>
-                                        <div class="mb-3 ms-auto">
+                                        <div class="mb-3 ms-auto col-md-6">
                                             <label for="exampleFormControlInput2" class="form-label">Jumlah Stok</label>
                                             <input type="number" class="form-control" id="exampleFormControlInput2" name="stok" required>
                                         </div>

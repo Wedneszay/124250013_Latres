@@ -79,11 +79,11 @@ $result = mysqli_query($koneksi, $query);
                     </select>
                 </div>
                 <div class="wrapper-date">
-                    <div class="mb-3">
+                    <div class="mb-3 col-md-6">
                         <label for="exampleFormControlInput4" class="form-label">Tanggal Pinjam</label>
                         <input type="date" class="form-control" id="exampleFormControlInput4" name="tanggal_pinjam" required>
                     </div>
-                    <div class="mb-3 ms-auto">
+                    <div class="mb-3 ms-auto col-md-6">
                         <label for="exampleFormControlInput5" class="form-label">Tanggal Kembali</label>
                         <input type="date" class="form-control" id="exampleFormControlInput5" name="deadline" required>
                     </div>
