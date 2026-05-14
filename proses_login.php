@@ -20,12 +20,7 @@ if (mysqli_num_rows($result) > 0) {
     $_SESSION['username'] = $user['username'];
     $_SESSION['id'] = $user['id'];
     $_SESSION['role'] = $user['role'];
-    if ($user['role'] == 'admin') {
-        header('Location: dashboardAdmin.php');
-    }
-    else {
-        header('Location: list_koleksi.php');
-    }
+    header('Location: list_koleksi.php');
     exit();
 }
 else {
