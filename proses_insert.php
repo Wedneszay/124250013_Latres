@@ -13,14 +13,14 @@ $resultCek = mysqli_query($koneksi, $cekKode);
 
 if (mysqli_num_rows($resultCek) > 0) {
     $_SESSION['insertGagal'] = "Insert gagal! Kode buku sudah digunakan.";
-    header('Location: koleksibuku.php');
+    header('Location: list_koleksi.php');
     exit();
 }
 else {
     $queryInsert = "INSERT INTO databuku(id, kode_buku, judul, pengarang, kategori, stok) VALUES (' ','$kode_buku','$judul','$pengarang','$kategori','$stok')";
     $resultInsert = mysqli_query($koneksi, $queryInsert);
     if ($resultInsert) {
-        header('Location: koleksibuku.php');
+        header('Location: list_koleksi.php');
         exit();
     }
     else {
