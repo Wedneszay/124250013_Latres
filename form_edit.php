@@ -83,6 +83,8 @@ $row = mysqli_fetch_assoc($result);
                         <option value="Fiksi">Fiksi</option>
                         <option value="Teknologi">Teknologi</option>
                         <option value="Ilmiah">Ilmiah</option>
+                        <option value="Novel">Novel</option>
+                        <option value="Komedi">Komedi</option>
                     </select>
                 </div>
                 <div class="form-button">
