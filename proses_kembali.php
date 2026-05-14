@@ -14,7 +14,7 @@ $tanggal_kembali = $row['deadline'];
 $updateTanggal = "UPDATE datapeminjam SET tanggal_kembali='$tanggal_sekarang' WHERE id = '$id'";
 $resultTanggal = mysqli_query($koneksi, $updateTanggal);
 
-$updateStok = "UPDATE databuku SET stok = stok + 1 WHERE id= = '$id_buku'";
+$updateStok = "UPDATE databuku SET stok = stok + 1 WHERE id = '$id_buku'";
 $resultStok = mysqli_query($koneksi, $updateStok);
 
 if ($resultTanggal) {
